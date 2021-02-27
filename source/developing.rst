@@ -1,4 +1,4 @@
-Developping
+Developing
 ===========
 
 Ref:
@@ -57,7 +57,7 @@ you can use ``git add --interactive`` or ``-i`` to select the patch to
 add to the index::
 
     $ git add -i
-      1:        +0/-0       +65/-0 source/developping.rst
+      1:        +0/-0       +65/-0 source/developing.rst
       2:    unchanged        +1/-1 source/error_fix.rst
 
       *** Commands ***
@@ -70,7 +70,7 @@ add to the index::
       ....
       What now> s
 		staged     unstaged path
-      1:        +7/-0       +58/-0 source/developping.rst
+      1:        +7/-0       +58/-0 source/developing.rst
       2:    unchanged        +1/-1 source/error_fix.rst
       .....
       What now> q

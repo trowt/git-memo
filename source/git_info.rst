@@ -83,9 +83,9 @@ See also the :doc:`remote section <remote>`
           URL: ../ssh_server
           Tracked remote branches
           kernoel master tubuntu
-          $ git config --get-regexp remote\\.ssh_server\\..\*
-          remote.ssh_server.url ../ssh_server
-          remote.ssh_server.fetch +refs/heads/*:refs/remotes/ssh_server/*
+        $ git config --get-regexp remote\\.ssh_server\\..\*
+        remote.ssh_server.url ../ssh_server
+        remote.ssh_server.fetch +refs/heads/*:refs/remotes/ssh_server/*
 
 
 ..  index::
