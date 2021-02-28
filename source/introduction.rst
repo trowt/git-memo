@@ -22,7 +22,7 @@ Most of the key points you have to learn first
 are skipped, some points are very easy and common, some are exploring
 git use more in depth.
 
-I am not a git expert, and I'm sure thet there are errors,
+I am not a git expert, and I'm sure that there are errors,
 inaccuracies, and easier ways to accomplish the tasks. I will be happy
 to learn them in your `pull requests <https://github.com/marczz/git-memo/pulls>`_!
 

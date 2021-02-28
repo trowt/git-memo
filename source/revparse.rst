@@ -88,7 +88,7 @@ can use it wherever a revision is needed.
    We can use the `--refs` option yo limit the refs name, but using:
    ::
 
-     $   name-rev --name-only --refs=distrib 1fc1148f867
+     $ git name-rev --name-only --refs=distrib 1fc1148f867
      origin/distrib~11
 
    give the same answer than previously because ``origin-distrib``  is
@@ -103,7 +103,7 @@ can use it wherever a revision is needed.
    If we want to see both the message and a symbolic ref we can do:
    ::
 
-       git log -1 distrib~12 | git name-rev --stdin
+       $ git log -1 distrib~12 | git name-rev --stdin
        commit 1fc1148f867ee644f9c039fd3614ae5c48171276 (remotes/origin/distrib~11)
        Author: .....
        ....
@@ -304,27 +304,27 @@ Ref: :gitdoc:`git-rev-parse(1) <git-rev-parse.html>`
 To show the absolute path of the top-level directory.:
 ::
 
-    $git rev-parse --show-toplevel
+    $ git rev-parse --show-toplevel
 
 To show the *relative* path of the top-level repository::
 
-    $git rev-parse --show-cdup
+    $ git rev-parse --show-cdup
 
 or to show the path of the current directory relative to the
 top-level::
 
-    $git rev-parse --show-prefix
+    $ git rev-parse --show-prefix
 
 I use it to have a default message showing paths relative to top-level
 with::
 
-    $git commit :/$(git rev-parse --show-prefix)<relative-name>
+    $ git commit :/$(git rev-parse --show-prefix)<relative-name>
 
 
 To show the git directory:
 ::
 
-    $git rev-parse --git-dir
+    $ git rev-parse --git-dir
 
 If ``$GIT_DIR`` is defined it is  returned otherwise when we are in
 Git directory return the ``.git`` directory, if not exit with nonzero
@@ -332,7 +332,7 @@ status after printing an error message.
 
 To know if you are in a work-tree::
 
-    $git rev-parse --is-inside-work-tree
+    $ git rev-parse --is-inside-work-tree
 
 Note also that an alias expansion  prefixed with an exclamation point
 will be executed from the top-level directory of a repository

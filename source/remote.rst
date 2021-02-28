@@ -125,9 +125,13 @@ To push a new branch::
 
 To delete the branch on the remote::
 
+  $ git push --delete origin newfeature
+
+Or:
+
   $ git push origin :newfeature
 
-*It means push an empty branch to newfeature*
+*It means push an empty reference to newfeature*
 
 
 References

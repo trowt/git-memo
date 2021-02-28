@@ -12,7 +12,7 @@ Contents:
 
     introduction.rst
     git_info.rst
-    developping.rst
+    developing.rst
     revparse.rst
     sharing.rst
     merge.rst

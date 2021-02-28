@@ -141,7 +141,7 @@ or::
 
   $ git rebase --abort
 
-..  A developper
+..  A developer
     git stash
     git stash list
     git stash show

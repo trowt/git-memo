@@ -7,6 +7,22 @@
 Filter branch
 =============
 
+.. warning::
+
+   Note that the ``filter-branch`` is officially not recommended. Recent
+   versions of the ``filter-branch`` manual contain the following warning:
+
+      ``git filter-branch`` has a plethora of pitfalls that can produce
+      non-obvious manglings of the intended history rewrite (and can leave you
+      with little time to investigate such problems since it has such abysmal
+      performance).  These safety and performance issues cannot be backward
+      compatibly fixed and as such, its use is not recommended. Please use an
+      alternative history filtering tool such as ``git filter-repo``. If you
+      still need to use ``git filter-branch``, please carefully read SAFETY
+      (and PERFORMANCE) to learn about the land mines of ``filter-branch``, and
+      then vigilantly avoid as many of the hazards listed there as reasonably
+      possible.
+
 This chapter describe some uses of ``git filter-branch`` before using
 it you should be aware that this command is destructive, and even the
 untouched commits end up with different object names so your new

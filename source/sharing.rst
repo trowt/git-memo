@@ -92,12 +92,11 @@ You can push a branch to it with
 It will push all references in the branch *mybranch* to a branch with same name on
 *origin*. If the remote *mybranch* does not exist it is created.
 
-If *mybranch* has a configured :ref:`upstream branch<remote_tracking>` that ou can see
+If *mybranch* has a configured :ref:`upstream branch<remote_tracking>` that you can see
 with
-xs
 ::
 
-    $git branch -vv --list mybranch
+    $ git branch -vv --list mybranch
 
 or
 
@@ -216,7 +215,7 @@ Refs:
 We have seen how to :ref:`List local tags <tag_info>`, but the remote
 repository can have a different set of tags. Usually we want to have
 the tags of a remote origin bare repository, but if we include also in
-our remotes the repo of a fellow developper it is usually inapropriate
+our remotes the repo of a fellow developer it is usually inappropriate
 to import all his tags.
 
 To list the remote tags we use::
@@ -236,11 +235,11 @@ The lightweight tags are also shown by this command. But lightweight
 tags are not object, but only an alias for a commit, so only the
 commit appear in the list.
 
-To differenciate between lightweight and anotated tags you can
+To differentiate between lightweight and annotated tags you can
 ``git-cat-file -t <tag>`` it output tag for a rag object, but commit
 for a lightweight tag.
 
-Tags are fetched by default, unless you spectify ``--no-tags``
+Tags are fetched by default, unless you specify ``--no-tags``
 or have set the option ``remote.<name>.tagopt``. If you don't change defaults
 you get the remote tags from the repository you fetch from; but
 they are not pushed by default, that allow to have tags for local use
@@ -252,7 +251,7 @@ You can also use::
 
 to get the *local* tags.
 
-It is equivallent to::
+It is equivalent to::
 
     $ git show-ref --tags --dereference
 
@@ -312,7 +311,7 @@ Changing the tag message
 Modifying a shared tag is strongly discouraged by
 :gitdoc:`git-tag(1) <git-tag.html>`. But changing only the message
 while keeping an unchanged date and commit reference is not too
-harmfull, but you have to know that your change will not be
+harmful, but you have to know that your change will not be
 automatically propagated to people that pull from you.
 
 If you want to keep the original date use::
