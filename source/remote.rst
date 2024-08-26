@@ -33,7 +33,7 @@ To show how is configured one remote, and also
 Cloning a remote repository
 ---------------------------
 
-Ref: :gitdoc:`git-clone(1) <git-clone.html>`.
+Ref: :gitscm:`git-clone(1) <git-clone>`.
 
 To clone a remote repository::
 
@@ -137,7 +137,7 @@ Or:
 References
 ----------
 
--   :github:`remotes`
--   :gitdoc:`git-remote(1) <git-remote.html>`
--   `Setting up a new remote git repository
-    <http://toolmantim.com/articles/setting_up_a_new_remote_git_repository>`_
+-   :gitscm:`git-remote(1) <git-remote>`
+-   :gitscm:`git-push(1) <git-push>`
+-   :progit:`Working with Remotes <Git-Basics-Working-with-Remotes>`
+-   :progit:`Remote branches <Git-Branching-Remote-Branches>`
