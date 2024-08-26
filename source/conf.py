@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Git Memo documentation build configuration file based on shinx 1.7.9
+# Git Memo documentation build configuration file based on Sphinx 7.2.9
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -29,10 +29,11 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 #
 sys.path.insert(0, os.path.abspath('.'))
 
-# General information about the project.
+# -- Project information -----------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 project = 'Git Memo'
 author = 'Marc Zonzon'
-copyright = '2012-2019' + author
+copyright = '2012-2024' + author
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -55,6 +56,7 @@ except subprocess.CalledProcessError:
     commit = ''
 
 # -- General configuration ---------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
@@ -74,7 +76,7 @@ extensions = [
 # graphviz_dot_args = ["-N fontsize=9"]
 graphviz_output_format = "svg"
 
-# Add any paths that contain templates here, relative to this directory.
+# Add any paths that contain extra templates here, relative to this directory.
 templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
@@ -91,7 +93,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = "en"
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -142,6 +144,7 @@ highlight_language = 'shell-session'
 todo_include_todos = False
 
 # -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -466,16 +469,21 @@ epub_copyright = copyright
 
 # Example configuration for intersphinx: refer to the Python standard library.
 #intersphinx_mapping = {'http://docs.python.org/': None}
+# extlinks extension: https://www.sphinx-doc.org/en/master/usage/extensions/extlinks.html
+# The second item in each tuple is the caption if it is None, the link caption is the
+# full URL. if it is a string with on %s, the partial url is substituted to %s in the
+# caption.
 local_ref = False
 extlinks = {
-    'man':('http://manpages.debian.org/cgi-bin/man.cgi?query=%s', ''),
-    'github': ('http://help.github.com/%s', 'github: '),
-    'progit' : ('http://git-scm.com/book/en/%s', 'Pro Git: '),
-    'annex' : ('https://git-annex.branchable.com/%s', 'git-annex: ')
+    'man':('http://manpages.debian.org/cgi-bin/man.cgi?query=%s', 'man %s'),
+    'github': ('http://help.github.com/%s', 'github: %s'),
+    'progit' : ('https://git-scm.com/book/en/v2/%s', 'Pro Git: %s'),
+    'annex' : ('https://git-annex.branchable.com/%s', 'git-annex: %s'),
+    'gitscm': ('https://git-scm.com/docs/%s', 'git doc: %s')
     }
 if local_ref:
-    extlinks['gitdoc'] = ('http://localhost/doc/git-doc/%s', 'git doc: ')
+    extlinks['gitdoc'] = ('http://localhost/doc/git-doc/%s', 'git doc: %s')
 else:
     extlinks['gitdoc'] = (
         'https://www.kernel.org/pub/software/scm/git/docs/%s',
-        'git doc: ')
+        'git doc: %s')
